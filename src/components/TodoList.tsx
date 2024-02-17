@@ -8,11 +8,11 @@ const TodoList: FC = () => {
   const { todoList } = useSelector((state: RootState) => state.todo);
 
   return (
-    <section className="flex flex-col w-full gap-5 ">
+    <main className="flex flex-col w-full gap-5 ">
       {todoList.map((todo: TodoItem) => (
         <TodoListItem key={todo.id} todoItem={todo} />
       ))}
-    </section>
+    </main>
   );
 };
 

@@ -6,4 +6,4 @@ TodoList Uygulaması
 
 npm install -D tailwindcss postcss autoprefixer
 
-npm install react-spinners react-redux @reduxjs/toolkit react-icons
+npm install react-spinners react-redux @reduxjs/toolkit react-icons framer-motion

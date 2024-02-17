@@ -4,6 +4,7 @@ import { TodoInitialState, TodoItem } from '../../types/types';
 
 const initialState: TodoInitialState = {
   isLoading: false,
+  isOpenLoading: true,
   todoList: [],
   content: '',
 };
@@ -12,6 +13,9 @@ export const todoSlice = createSlice({
   name: 'todo',
   initialState,
   reducers: {
+    changeIsOpenLoading: (state, action: PayloadAction<boolean>) => {
+      state.isOpenLoading = action.payload;
+    },
     changeContent: (state, action: PayloadAction<string>) => {
       state.content = action.payload;
     },
@@ -25,6 +29,6 @@ export const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, removeTodo, changeContent } = todoSlice.actions;
+export const { addTodo, removeTodo, changeContent, changeIsOpenLoading } = todoSlice.actions;
 
 export default todoSlice.reducer;
